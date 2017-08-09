@@ -8,6 +8,7 @@ console.log(copy); // { a: "mike" }
 
 //Array.value -- ES6/ES2015 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values
 //Not work: IE11, Chrome
+//!!! Does not work with babel-runtime & transform-runtime
 // let a = ['w', 'y', 'k', 'o', 'p']; 
 // let iterator = a.values();
 // console.log(iterator.next().value); // w 
