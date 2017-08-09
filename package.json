@@ -1,0 +1,13 @@
+{
+    "name": "simple-polyfill",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "browser-sync start  -c bs-config.js"
+    },
+    "author": "Mike Barlow",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "browser-sync": "2.18.13"
+    }
+}
