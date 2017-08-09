@@ -7,80 +7,20 @@
     <!--
         ECMAScript Compatibility Table
         http://kangax.github.io/compat-table/es6/
-        
-        Core-js
-        https://github.com/zloirock/core-js#missing-polyfills 
+       
     -->
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.0/core.js"></script> -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.0/core.js"></script> -->
 </head>
 
 <body>
     Hello
 
     <script>
-        if (typeof Object.assign != 'function') {
-            // Must be writable: true, enumerable: false, configurable: true
-            Object.defineProperty(Object, "assign", {
-                value: function assign(target, varArgs) { // .length of function is 2
-                    'use strict';
-                    if (target == null) { // TypeError if undefined or null
-                        throw new TypeError('Cannot convert undefined or null to object');
-                    }
 
-                    var to = Object(target);
-
-                    for (var index = 1; index < arguments.length; index++) {
-                        var nextSource = arguments[index];
-
-                        if (nextSource != null) { // Skip over if undefined or null
-                            for (var nextKey in nextSource) {
-                                // Avoid bugs when hasOwnProperty is shadowed
-                                if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                                    to[nextKey] = nextSource[nextKey];
-                                }
-                            }
-                        }
-                    }
-                    return to;
-                },
-                writable: true,
-                configurable: true
-            });
-        }
     </script>
 
     <script>
-        console.log("hello")
-
-        //Object.assign -- ES6/ES2015 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-        //Not work: IE11
-        let obj = { a: "mike" };
-        let copy = Object.assign({}, obj);
-        console.log(copy); // { a: "mike" }
-
-        //Array.value -- ES6/ES2015 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values
-        //Not work: IE11, Chrome
-        // let a = ['w', 'y', 'k', 'o', 'p']; 
-        // let iterator = a.values();
-        // console.log(iterator.next().value); // w 
-        // console.log(iterator.next().value); // y 
-        // console.log(iterator.next().value); // k 
-        // console.log(iterator.next().value); // o 
-        // console.log(iterator.next().value); // p
-
-
-        //Arrow Function -- ES6/ES2015 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-        // let writeLine = (a) => console.log(a)
-        // writeLine("hello ");
-
-
-        //********* The issues with Global Polyfills
-        // console.log("Hello Everyone")
-
-        // setInterval(function () {
-        //     console.log = function () { return 2 + 2 };
-        // }, 10000);
     </script>
 </body>
 
