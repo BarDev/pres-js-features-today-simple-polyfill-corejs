@@ -29,3 +29,27 @@ console.log(copy); // { a: "mike" }
 // setInterval(function () {
 //     console.log = function () { return 2 + 2 };
 // }, 10000);
+
+
+//class fields -- https://github.com/tc39/proposal-class-fields
+
+class Something  {
+    title = "Welcome";
+    name = "Mike";
+
+    handleTitleChanged = (e) => {
+        const newTitle = e.target.value;
+        title = newTitle;
+        render();
+    }
+
+    render() {
+        //Simulate an user action
+        console.log(this.title)
+    }
+}
+
+var something = new Something();
+
+
+something.render();
