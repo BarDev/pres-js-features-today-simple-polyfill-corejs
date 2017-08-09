@@ -22,7 +22,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 query: {
-                    presets: [],
+                    presets: ["env"],
                     plugins:["transform-runtime"]
                 }
             },

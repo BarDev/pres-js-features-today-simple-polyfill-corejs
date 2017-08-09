@@ -20,7 +20,7 @@ console.log(copy); // { a: "mike" }
 
 //Arrow Function -- ES6/ES2015 -- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 // let writeLine = (a) => console.log(a)
-// writeLine("hello ");
+// writeLine("hello from arrow function");
 
 
 //********* The issues with Global Polyfills
